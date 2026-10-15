@@ -4457,7 +4457,7 @@ function chartSizing(chart, ocean=false,traces=[]){
   const count=Math.max(1,traces.filter(trace=>trace.visible!==false && trace.visible!=='legendonly' && trace.showlegend!==false).length);
   const rows=compact?Math.ceil(count/2):Math.ceil(count/Math.max(1,Math.floor((width-85)/120)));
   const bottom=(compact?0:12)+rows*29+(ocean?30:0);
-  return {height:(ocean?(compact?340:400):260)+bottom,dragmode:false,
+  return {height:(ocean?(compact?300:340):260)+bottom,dragmode:false,
     margin:{t:25,b:bottom,l:compact?48:65,r:compact?8:20},
     font:{family:'Segoe UI, Arial',size:compact?10:11,color:'#667889'},
     legend:{orientation:'h',x:0.5,xanchor:'center',y:compact?-0.25:-0.26,yanchor:'top',
