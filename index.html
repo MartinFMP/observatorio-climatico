@@ -143,7 +143,8 @@ color:#0f172a;line-height:1}
     .nav-block{background:#eaf1fc;border-color:#dbe6f5;margin-top:28px}
     .nav-title{color:#577cae}.topbar{background:#ffffffed;border-color:#e1e8f1}
     .topbar{height:auto;min-height:80px;gap:16px}
-    .header-title{flex:1;justify-content:center;position:relative;padding:0 36px}
+    .header-title{flex:1;justify-content:flex-start;position:relative;padding:0}
+    .header-title .title{flex:1;min-width:0}
     .header-title .title,.header-title h1{text-align:center}
     .update-stamp{margin-top:5px;font-size:10px;color:#687b91;font-weight:500;line-height:1.5}
     .header-title .menu-toggle{position:absolute;left:0}
@@ -214,17 +215,18 @@ color:#0f172a;line-height:1}
     .content{width:100%}.region-panel,.chart{min-width:0}
     .title h1{overflow-wrap:anywhere}.footer a,.atsm-table-note{overflow-wrap:anywhere}
     .video-link{display:inline-flex;align-items:center;justify-content:center;gap:6px;flex-shrink:0;padding:9px 12px;
-      border:1px solid #a9c8e6;border-radius:9px;background:#eef6ff;color:#285a87;text-decoration:none;
+      border:1px solid #e5b1b1;border-radius:9px;background:#fff1f1;color:#a33434;text-decoration:none;
       font:600 11px 'Segoe UI',Arial,sans-serif;white-space:nowrap;animation:video-glow 3.2s ease-in-out infinite}
-    .video-link:hover{background:#dfeeff;color:#174a78;animation-play-state:paused}
-    .video-link:focus-visible{outline:2px solid #4776d0;outline-offset:3px;animation:none}
-    @keyframes video-glow{0%,100%{opacity:1;box-shadow:0 0 0 0 #4776d000}50%{opacity:.82;box-shadow:0 0 0 3px #4776d018}}
+    .video-link:hover{background:#ffe1e1;color:#8c2525;animation-play-state:paused}
+    .video-link:focus-visible{outline:2px solid #ba4545;outline-offset:3px;animation:none}
+    @keyframes video-glow{0%,100%{opacity:1;box-shadow:0 0 0 0 #ba454500}50%{opacity:.82;box-shadow:0 0 0 3px #ba454518}}
     .close-filters{display:none}.menu-toggle{width:44px;height:44px;touch-action:manipulation}
     .event-options label{min-height:36px}.event-options input{width:18px;height:18px}
     @media(max-width:1200px){.app{grid-template-columns:240px minmax(0,1fr)}}
     @media(min-width:901px) and (max-width:1100px){#panelGrid{grid-template-columns:1fr}}
     @media(max-width:900px){
       .app{grid-template-columns:minmax(0,1fr)}
+      .header-title{padding-left:44px}
       .sidebar{height:100dvh;max-width:90vw;padding-top:54px;overscroll-behavior:contain;visibility:hidden}
       .sidebar.open{visibility:visible}.filters-open{overflow:hidden}
       .close-filters{display:flex;position:absolute;right:12px;top:10px;width:36px;height:36px;
