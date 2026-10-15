@@ -11,31 +11,25 @@
     *{box-sizing:border-box}
     body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 80% 0%,#125987 0%,transparent 55%),linear-gradient(155deg,#103e64,#061d36 70%)}
     main{max-width:1400px;margin:auto;padding:28px clamp(16px,4vw,60px) 36px}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:30px}
-    nav a{color:#d8efff;font-size:14px;text-decoration:none}
-    .brand{font-weight:750;letter-spacing:.12em;font-size:12px}
-    h1{font-size:clamp(30px,5vw,58px);letter-spacing:-.035em;line-height:1.1;margin:0 0 12px;font-weight:850}
-    h1 span{color:#79d6ff;white-space:nowrap}
-    .intro{color:#c7dfef;font-size:clamp(15px,2vw,18px);line-height:1.6;margin:0 0 24px}
+    nav{display:flex;justify-content:flex-end;margin-bottom:22px}
+    .dashboard{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:12px 22px;border:2px solid #65dcff;border-radius:12px;background:linear-gradient(135deg,#0b6597,#08496f);color:#fff;font-size:15px;font-weight:800;text-decoration:none;box-shadow:0 0 0 4px #65dcff12,0 6px 24px #0003}
+    .dashboard svg{width:20px;height:20px;flex:none}
+    .dashboard:hover{background:linear-gradient(135deg,#0d79b2,#095f8f);text-decoration:none;filter:none}
     .screen{overflow:hidden;border-radius:18px;background:#020c15;border:1px solid #7cc9ff33;box-shadow:0 24px 70px #0006}
     video{display:block;width:100%;aspect-ratio:16/9;max-height:76vh;background:#020c15;object-fit:contain}
-    .footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;margin-top:22px}
-    .hint{margin:0;color:#bad6e9;font-size:14px;line-height:1.6}
+    .footer{display:flex;justify-content:flex-end;margin-top:22px}
     .download{display:inline-flex;align-items:center;justify-content:center;background:#d9f3ff;color:#082c52;text-decoration:none;border:1px solid #e7f9ff;border-radius:10px;padding:12px 20px;font-size:14px;font-weight:750}
     a:hover{filter:brightness(1.12);text-decoration:underline}
     a:focus-visible,video:focus-visible{outline:3px solid #ffdc62;outline-offset:5px}
-    @media(max-width:600px){main{padding-top:20px}nav{margin-bottom:26px}.brand{font-size:10px;letter-spacing:.08em}nav a{font-size:12px}.screen{border-radius:10px}.footer{align-items:flex-start}.download{width:100%}}
+    @media(max-width:600px){main{padding-top:20px}nav{margin-bottom:20px}.screen{border-radius:10px}.download{width:100%}}
     @media(prefers-reduced-motion:no-preference){.screen{animation:appear .6s ease-out}@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}}
   </style>
 </head>
 <body>
   <main>
     <nav aria-label="Navegación">
-      <a class="brand" href="./">OBSERVATORIO CLIMÁTICO</a>
-      <a href="./">Ver dashboard</a>
+      <a class="dashboard" href="./">Ver dashboard<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
     </nav>
-    <h1>EL NIÑO <span>2026/2027</span></h1>
-    <p class="intro">Del océano a sus impactos en el Perú.</p>
     <div class="screen">
       <video controls playsinline preload="metadata" poster="assets/video/portada.jpg" aria-label="Video El Niño 2026–2027">
         <source src="assets/video/El_Nino_26_27.mp4" type="video/mp4">
@@ -43,7 +37,6 @@
       </video>
     </div>
     <div class="footer">
-      <p class="hint">Dale play para verlo aquí. Puedes activar el sonido y la pantalla completa.<br>5:59 min. Full HD. Subtítulos integrados.</p>
       <a class="download" href="assets/video/El_Nino_26_27.mp4" download="El_Nino_26_27.mp4">Descargar video</a>
     </div>
   </main>
